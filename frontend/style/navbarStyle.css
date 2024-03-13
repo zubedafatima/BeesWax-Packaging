@@ -11,11 +11,11 @@ body {
   height: 100px;
   width: 100%;
 }
-ul {
+.nav-bar ul {
   display: flex;
 }
 
-li {
+.nav-bar li {
   list-style: none;
   text-align: center;
 }
