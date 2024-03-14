@@ -28,6 +28,8 @@ body {
 }
 
 .nav-bar ul li :hover {
-  background-color: 023047;
-  color: black;
+  background-color: white;
+  opacity: 0.5;
+  color: rgb(7, 6, 6);
+  border-radius: 40px;
 }
