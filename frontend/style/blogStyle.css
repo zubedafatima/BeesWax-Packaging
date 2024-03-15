@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a, .blog-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    justify-content: flex-start; /* Align cards to the start of the container */
+    width: 100%; /* Take up full width */
+    max-width: 1200px; /* Maximum width of the container, adjust as needed */
+    margin: 0 auto; /* Center the container itself */
+}
+
+.blog-card {
+    display: flex;
+    max-width: 60%;
+    flex-direction: column; /* Stack content and image vertically */
+    justify-content: space-between; /* Distribute space */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    height: auto; /* Adjust based on content, or set a min-height for consistency */
+    min-height: 200px; /* Example minimum height; adjust as needed */
+    /*.blog-card {*/
+    /*    !* Your existing .blog-card styles *!*/
+    /*    width: 100%; !* Make cards take full width of their container *!*/
+    /*    max-width: 600px; !* Maximum width of each card, adjust as needed *!*/
+    /*}*/
+}
+
+.blog-card article {
+    display: flex;
+    flex-direction: row; /* Ensure content and images are side by side */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between text and image */
+    flex: 1; /* Allow article to fill available space */
+    padding: 20px;
+}
+
+.blog-card .content {
+    display: flex;
+    flex-direction: column; /* Stack text content vertically */
+    justify-content: center; /* Center text content vertically */
+    padding-right: 20px; /* Provide spacing between text and image */
+    flex: 1; /* Allow text content to fill available space */
+}
+
+.blog-card img {
+    max-width: 20%; /* Limit image width to half of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without distorting aspect ratio */
+}
+
+.blog-card:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: lightslategray;
+}
+
+footer {
+    background-color: #f4f4f4;
+}
+
+
+.blog-card:nth-child(odd) .content, .blog-card:nth-child(even) img {
+    order: 1; /* Ensures content is on the left for odd cards, image on the left for even */
+}
+
+.blog-card:nth-child(even) .content, .blog-card:nth-child(odd) img {
+    order: 2; /* Ensures image is on the right for odd cards, content on the right for even */
+}
+
+.blog-card .content, .blog-card img {
+    flex: 1; /* Allows both content and image to fill available space equally */
+}
+
+.blog-card .content {
+    padding-right: 20px; /* Adds some spacing between text content and the image for odd cards */
+}
+
+.blog-card:nth-child(even) .content {
+    padding-right: 0;
+    padding-left: 20px; /* Adds some spacing between text content and the image for even cards */
+}
+
+.blog-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+

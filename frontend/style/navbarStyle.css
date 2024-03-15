@@ -7,12 +7,17 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: 8ECAE6;
+  background-color: #8ECAE6;
   height: 100px;
   width: 100%;
 }
 .nav-bar ul {
   display: flex;
+}
+
+.navbar-logo {
+  height: 100px; /* Adjust based on your logo's size to fit within the navbar */
+  margin-right: 300px; /* Adds some space between the logo and the nav items */
 }
 
 .nav-bar li {
