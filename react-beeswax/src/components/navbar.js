@@ -6,6 +6,7 @@ import { About } from "./about.js";
 import { Contact } from "./contact.js";
 import { Profile } from "./profile.js";
 import { Blogs } from "./blogs.js";
+import { Products } from "./products.js";
 export function Navbar() {
   return (
     <>
@@ -22,6 +23,9 @@ export function Navbar() {
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
           </li>
           <li>
             <Link to="/cart">
@@ -65,6 +69,7 @@ export function Navbar() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </>

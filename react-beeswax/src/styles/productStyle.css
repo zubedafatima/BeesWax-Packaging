@@ -1,0 +1,133 @@
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+.carousel {
+  width: 100%;
+  height: 55%;
+  align-items: center;
+  justify-content: center;
+}
+/* .carousel-img {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 80%;
+  z-index: 0;
+  opacity: 0.9;
+} */
+.carousel img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(100, 95, 95, 0.705);
+  color: black;
+  text-align: left;
+  transform: translateY(30%);
+  z-index: 1;
+}
+.carousel-text p {
+  background-color: rgba(252, 252, 252, 0.459);
+  margin-top: 80px;
+  padding: 50px;
+}
+
+.sub-container {
+  width: 100%;
+  height: 50%;
+}
+
+.product-nav {
+  display: flex;
+  float: left;
+  margin-top: 50px;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  justify-content: space-evenly;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  /* justify-content: space-around; */
+}
+
+.product-card {
+  background-color: yellow;
+  height: 250px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  background: rgba(84, 152, 161, 0.671);
+  /* background-color: 8ECAE6;
+  background-color: rgba(13, 116, 116, 0.637); */
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 1;
+  transform: translateY(-100%);
+}
+.product-img {
+  height: 100%;
+  width: 100%;
+}
+.product-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.product-details {
+  height: 100%;
+  width: 100%;
+}
+
+.sub-details {
+  display: flex;
+  justify-content: space-between;
+}
+.sub-details ul {
+  padding-left: 0%;
+  padding-top: 10%;
+}
+.sub-details ul li {
+  list-style: none;
+  text-decoration: none;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.sub-details button {
+  border-radius: 3px;
+  background-color: rgba(31, 218, 218, 0);
+  border: none;
+  width: 100px;
+}
+
+.sub-details button:hover svg {
+  cursor: grab;
+  color: aliceblue;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card:hover .card-overlay {
+  opacity: 1;
+}
