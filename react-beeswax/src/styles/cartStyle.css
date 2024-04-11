@@ -1,0 +1,173 @@
+.cart-container {
+  display: flex;
+  align-items: center; /* This vertically centers your cart in the available space */
+  justify-content: center; /* This horizontally centers your cart */
+  flex-direction: column; /* Stacks items vertically */
+  height: 100vh; /* Make it take up the full viewport height */
+}
+
+.division {
+  background-color: white;
+  height: 80%;
+  width: 70%;
+  border-color: aqua;
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left-container {
+  float: left;
+  background-color: 8ECAE6;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.right-container {
+  background-color: rgb(241, 238, 238);
+  width: 30%;
+  height: 100%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.top-div {
+  display: flex;
+  justify-content: space-between;
+}
+.left-head {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.right-head {
+  width: 50%;
+  float: right;
+  padding: 10px;
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.right-head h5 {
+  margin-top: 30px;
+}
+
+.bottom-div {
+  background-color: 8ECAE6;
+}
+
+.item {
+  height: 15%;
+  border-top: solid 2px rgb(5, 5, 5);
+  border-bottom: solid 2px rgb(14, 13, 13);
+  border-width: 1px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.item p {
+  margin-top: 25px;
+  margin-left: 21px;
+}
+
+.item-name {
+  margin-left: 80px;
+  margin-top: -50px;
+}
+
+.itemname {
+  font-style: italic;
+  font-size: large;
+  /* text color and font change */
+}
+
+.itemdescrip {
+  font-style: normal;
+  font-size: medium;
+  /* text color and font change */
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.incrementer {
+  margin-left: 310px;
+  margin-top: -40px;
+}
+
+.price {
+  margin-left: 410px;
+  margin-top: -20px;
+}
+
+.close {
+  display: block;
+  margin-left: 130px;
+  margin-top: -20px;
+  transition: transform 0.2s;
+}
+
+.item_bottom {
+  height: 5%;
+  margin-top: 113px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.toatl_items_right {
+  float: right;
+}
+
+.close:hover {
+  transform: scaleY(2);
+  cursor: grab;
+}
+
+.item_bottom:hover {
+  transform: scaleY(1.5);
+  cursor: grab;
+}
+
+.right-container .top-div {
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  color: grey;
+}
+
+.Item-count-padding {
+  padding-left: 80px;
+}
+
+.Item-price-padding {
+  padding-left: 45px;
+}
+
+.td {
+  padding-right: 20px;
+}
+
+.checkout-btn {
+  padding: 10px 30px; /* Adjust the padding to increase the width */
+  background-color: 8ECAE6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #0056b3;
+}
