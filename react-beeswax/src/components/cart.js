@@ -49,11 +49,28 @@ export function Cart({ prop }) {
           <div className="left-container">
             <div className="top-div"></div>
             <div className="bottom-div">
-              <ul>
-                {items.map((item) => (
-                  <li key={item.id}>{item.name}</li> // Render each item
-                ))}
-              </ul>
+              {items.map((item) => (
+                <div className="item">
+                  <p>item img</p>
+                  <div className="item-name">
+                    <ul className="itemname">
+                      <li className="list" style={{ color: "grey" }}>
+                        {item.name}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="incrementer">
+                    <a href="/cart">-</a>
+                    <a href="/cart" class="border">
+                      1
+                    </a>
+                    <a href="/cart">+</a>
+                  </div>
+                  <div className="price">
+                    &euro; {item.price} <span class="close">&#10005;</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
           <div className="right-container"></div>

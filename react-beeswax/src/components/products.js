@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import productData from "../productItems.json";
 import bee from "../images/bees.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/productStyle.css";
 export function Products() {

@@ -1,5 +1,5 @@
 import "../styles/navbarStyle.css";
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import { Home } from "./home.js";
 import { Cart } from "./cart.js";
 import { About } from "./about.js";
@@ -7,7 +7,6 @@ import { Contact } from "./contact.js";
 import { Profile } from "./profile.js";
 import { Blogs } from "./blogs.js";
 import { Products } from "./products.js";
-import { useState, useEffect } from "react";
 
 export function Navbar() {
   return (
