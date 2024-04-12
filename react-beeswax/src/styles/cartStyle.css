@@ -37,13 +37,10 @@
 
 .left-head,
 .right-head {
+  color: grey;
   width: 100%;
   padding: 10px;
   text-align: center; /* Center align text */
-}
-
-.right-head h5 {
-  margin-top: 30px;
 }
 
 .bottom-div {
@@ -146,41 +143,48 @@ a {
 
 .right-container .top-div {
   text-align: center;
-  margin-top: 13px;
+  margin-top: 20px;
   margin-left: 30px;
   color: grey;
+
+  padding-left: 200px;
+}
+.right-head h5 {
+  margin-top: 30px;
+}
+.right-container .right-bottom-div {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+}
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.Item-count-padding {
-  padding-left: 20px; /* Adjust padding for responsiveness */
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-.Item-price-padding {
-  padding-left: 20px; /* Adjust padding for responsiveness */
-}
-
-.td {
-  padding-right: 20px;
-}
-
-.checkout-btn {
-  padding: 10px 30px;
-  background-color: 8ECAE6;
-  color: #fff;
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px; /* Adjust margin for responsiveness */
-  margin-bottom: 20px; /* Adjust margin for responsiveness */
-  text-align: center; /* Center align button */
-  width: 50%; /* Adjust width for responsiveness */
+  margin-top: 20px;
 }
 
-.checkout-btn:hover {
-  background-color: #0056b3;
+.checkout-button:hover {
+  background-color: #45a049;
 }
-
 /* Media Queries for Responsiveness */
 
 @media screen and (max-width: 768px) {

@@ -41,13 +41,22 @@ export function Cart({ prop }) {
     } else {
       setItems(listDummy);
     }
-  }, [cartItems]);
+  }, []);
 
   const handleRemoveItem = (itemId) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
     alert("Item removed!");
   };
+  const calculateTotal = (items) => {
+    return items
+      .reduce((acc, item) => acc + parseFloat(item.price.replace("$", "")), 0)
+      .toFixed(2);
+  };
 
+  const checkout = () => {
+    setItems([]);
+    alert("Thank you for shopping!");
+  };
   return (
     <>
       <div className="cart-container">
@@ -102,7 +111,21 @@ export function Cart({ prop }) {
                 Summary
               </h2>
             </div>
-            <div class="right-bottom-div"></div>
+            <div class="right-bottom-div">
+              {items.map((item) => (
+                <div className="summary-item" key={item.id}>
+                  <span>{item.name}</span>
+                  <span>{item.price}</span>
+                </div>
+              ))}
+              <div className="summary-total">
+                <span>Total:</span>
+                <span>${calculateTotal(items)}</span>
+              </div>
+              <button className="checkout-button" onClick={() => checkout()}>
+                Checkout
+              </button>
+            </div>
           </div>
         </div>
       </div>
