@@ -42,38 +42,68 @@ export function Cart({ prop }) {
       setItems(listDummy);
     }
   }, [cartItems]);
+
+  const handleRemoveItem = (itemId) => {
+    setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+    alert("Item removed!");
+  };
+
   return (
     <>
       <div className="cart-container">
         <div className="division">
           <div className="left-container">
-            <div className="top-div"></div>
+            <div className="top-div">
+              <div className="left-head">
+                <h2 style={{ fontsize: "xx-large" }}>Shopping cart</h2>
+              </div>
+              <div className="right-head">
+                <h5>Items</h5>
+              </div>
+            </div>
             <div className="bottom-div">
               {items.map((item) => (
                 <div className="item">
-                  <p>item img</p>
-                  <div className="item-name">
-                    <ul className="itemname">
-                      <li className="list" style={{ color: "grey" }}>
-                        {item.name}
-                      </li>
-                    </ul>
+                  <div className="img">
+                    <img src={item.imageUrl} alt="image"></img>
                   </div>
-                  <div className="incrementer">
-                    <a href="/cart">-</a>
-                    <a href="/cart" class="border">
-                      1
-                    </a>
-                    <a href="/cart">+</a>
-                  </div>
-                  <div className="price">
-                    &euro; {item.price} <span class="close">&#10005;</span>
+                  <div className="details">
+                    <div className="item-name">
+                      <ul className="itemname">
+                        <li className="list" style={{ color: "grey" }}>
+                          {item.name}
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="incrementer">
+                      <a href="/cart">-</a>
+                      <a href="/cart" class="border">
+                        1
+                      </a>
+                      <a href="/cart">+</a>
+                    </div>
+                    <div className="price">
+                      {item.price}{" "}
+                      <button
+                        onClick={() => handleRemoveItem(item.id)}
+                        className="close"
+                      >
+                        &#10005;
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="right-container"></div>
+          <div className="right-container">
+            <div className="top-div">
+              <h2 style={{ borderbottom: "solid 2px rgb(14, 13, 13)" }}>
+                Summary
+              </h2>
+            </div>
+            <div class="right-bottom-div"></div>
+          </div>
         </div>
       </div>
     </>
