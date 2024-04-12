@@ -1,3 +1,4 @@
+/*######################################################################################*/
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
@@ -5,25 +6,29 @@
   background-color: #8ecae6;
   height: 100px;
   width: 100%;
-}
-.nav-bar ul {
-  display: flex;
+  padding: 0 20px; /* padding to adjust space around navbar items */
 }
 
 .navbar-logo {
-  height: 100px; /* Adjust based on your logo's size to fit within the navbar */
-  margin-right: 300px; /* Adds some space between the logo and the nav items */
+  height: 60px; /*logo's size to fit within the navbar */
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Center align list items horizontally */
 }
 
 .nav-bar li {
-  list-style: none;
-  text-align: center;
+  margin-right: 20px; /* spacing between nav items */
 }
 
 .nav-bar ul li a {
   text-decoration: none;
   color: white;
-  padding: 30px;
+  padding: 15px 20px; /* padding for better spacing */
   border-radius: 2px;
 }
 
@@ -32,4 +37,24 @@
   opacity: 0.5;
   color: rgb(7, 6, 6);
   border-radius: 40px;
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    justify-content: center; /* Center items for smaller screens */
+    height: auto; /* Allow navbar to adjust its height based on content */
+  }
+
+  .nav-bar ul {
+    flex-direction: column; /* Stack nav items vertically */
+    text-align: center; /* Center text */
+  }
+
+  .nav-bar li {
+    margin: 10px 0; /* Add margin between nav items */
+  }
+
+  .navbar-logo {
+    margin-right: 0; /* Remove margin for logo on smaller screens */
+  }
 }

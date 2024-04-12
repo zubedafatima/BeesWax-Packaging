@@ -1,9 +1,9 @@
 .cart-container {
   display: flex;
-  align-items: center; /* This vertically centers your cart in the available space */
-  justify-content: center; /* This horizontally centers your cart */
-  flex-direction: column; /* Stacks items vertically */
-  height: 100vh; /* Make it take up the full viewport height */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .division {
@@ -17,16 +17,15 @@
 }
 
 .left-container {
-  float: left;
   background-color: 8ECAE6;
-  width: 70%;
+  width: 100%; /* Adjust width for responsiveness */
   height: 100%;
   border-radius: 10px 0px 0px 10px;
 }
 
 .right-container {
   background-color: rgb(241, 238, 238);
-  width: 30%;
+  width: 100%; /* Adjust width for responsiveness */
   height: 100%;
   border-radius: 0px 10px 10px 0px;
 }
@@ -35,20 +34,12 @@
   display: flex;
   justify-content: space-between;
 }
-.left-head {
-  width: 50%;
-  float: left;
-  padding: 10px;
-  margin-left: 10px;
-}
 
+.left-head,
 .right-head {
-  width: 50%;
-  float: right;
+  width: 100%;
   padding: 10px;
-  text-align: right;
-  margin-top: 15px;
-  margin-right: 20px;
+  text-align: center; /* Center align text */
 }
 
 .right-head h5 {
@@ -74,7 +65,7 @@
 }
 
 .item-name {
-  margin-left: 80px;
+  margin-left: 20px; /* Adjust margin for responsiveness */
   margin-top: -50px;
 }
 
@@ -102,31 +93,33 @@ a {
 }
 
 .incrementer {
-  margin-left: 310px;
-  margin-top: -40px;
+  margin-left: auto; /* Center incrementer */
+  margin-right: auto; /* Center incrementer */
+  margin-top: 10px; /* Adjust margin for responsiveness */
 }
 
 .price {
-  margin-left: 410px;
-  margin-top: -20px;
+  text-align: center; /* Center align price */
+  margin-top: 10px; /* Adjust margin for responsiveness */
 }
 
 .close {
   display: block;
-  margin-left: 130px;
-  margin-top: -20px;
+  margin: 0 auto; /* Center close button */
+  margin-top: 10px; /* Adjust margin for responsiveness */
   transition: transform 0.2s;
 }
 
 .item_bottom {
   height: 5%;
-  margin-top: 113px;
-  margin-left: 10px;
+  margin-top: 20px; /* Adjust margin for responsiveness */
+  text-align: center; /* Center align bottom div */
   transition: transform 0.2s;
 }
 
-.toatl_items_right {
-  float: right;
+.total_items_right {
+  float: right; /* Align total items to the right */
+  margin-right: 20px; /* Adjust margin for responsiveness */
 }
 
 .close:hover {
@@ -141,17 +134,16 @@ a {
 
 .right-container .top-div {
   text-align: center;
-  justify-content: center;
   margin-top: 30px;
   color: grey;
 }
 
 .Item-count-padding {
-  padding-left: 80px;
+  padding-left: 20px; /* Adjust padding for responsiveness */
 }
 
 .Item-price-padding {
-  padding-left: 45px;
+  padding-left: 20px; /* Adjust padding for responsiveness */
 }
 
 .td {
@@ -159,15 +151,88 @@ a {
 }
 
 .checkout-btn {
-  padding: 10px 30px; /* Adjust the padding to increase the width */
+  padding: 10px 30px;
   background-color: 8ECAE6;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px; /* Adjust margin for responsiveness */
+  margin-bottom: 20px; /* Adjust margin for responsiveness */
+  text-align: center; /* Center align button */
+  width: 50%; /* Adjust width for responsiveness */
 }
 
 .checkout-btn:hover {
   background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+  .division {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .right-container,
+  .left-container {
+    width: 100%; /* Adjust width for smaller screens */
+    border-radius: 10px; /* Adjust border-radius for smaller screens */
+  }
+
+  .top-div {
+    flex-direction: column; /* Stack top div items vertically on smaller screens */
+    align-items: center; /* Center align top div items */
+  }
+
+  .left-head,
+  .right-head {
+    width: 100%; /* Adjust width for smaller screens */
+    float: none; /* Remove float */
+  }
+
+  .right-head {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .item-name {
+    margin-left: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .price {
+    margin-top: 0; /* Remove top margin */
+  }
+
+  .close {
+    margin-top: 10px; /*margin for smaller screens */
+  }
+
+  .item_bottom {
+    margin-top: 10px; /*  margin for smaller screens */
+  }
+
+  .Item-count-padding,
+  .Item-price-padding {
+    padding-left: 10px; /* padding for smaller screens */
+  }
+
+  .checkout-btn {
+    width: 70%; /* width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .division {
+    width: 95%; /* width for even smaller screens */
+  }
+
+  .right-head h5 {
+    margin-top: 20px; /*  margin for even smaller screens */
+  }
+
+  .checkout-btn {
+    width: 90%; /*width for even smaller screens */
+  }
 }

@@ -7,7 +7,37 @@ import { Contact } from "./contact.js";
 import { Profile } from "./profile.js";
 import { Blogs } from "./blogs.js";
 import { Products } from "./products.js";
+import { useState, useEffect } from "react";
+
+const listDummy = [
+  {
+    id: 1,
+    name: "Product 1",
+    price: "$10",
+    imageUrl: "./images/bees.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    price: "$20",
+    imageUrl: "./images/bees.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    price: "$15",
+    imageUrl: "./images/bees.jpg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+];
+
 export function Navbar() {
+  const [cartItems, setCartItems] = useState([]);
+  useEffect(() => {
+    setCartItems(listDummy);
+  }, []);
   return (
     <>
       <nav className="nav-bar">
@@ -68,7 +98,7 @@ export function Navbar() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart prop={cartItems} />} />
         <Route path="/products" element={<Products />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
