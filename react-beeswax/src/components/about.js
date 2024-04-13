@@ -13,15 +13,15 @@ export function About() {
           <h1>About Us</h1>
         </div>
         <div className="sub-container">
-          <div className="product-section">
-            <div className="product-card">
-              <div className="product-img">
+          <div className="product-section1">
+            <div className="product-card1">
+              <div className="product-img1">
                 <img src={extra1} alt="" />
               </div>
-              <div className="card-overlay">
-                <div className="product-details">
-                  <div className="sub-details"></div>
-                  <div className="product-info">
+              <div className="card-overlay1">
+                <div className="product-details1">
+                  <div className="sub-details1"></div>
+                  <div className="product-info1">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a voluptatum expedita inventore cupiditate! Deserunt placeat nam eligendi quibusdam dicta quos. Cumque pariatur ea aliquid excepturi deserunt consectetur debitis consequatur?
                     </p>
@@ -29,14 +29,14 @@ export function About() {
                 </div>
               </div>
             </div>
-            <div className="product-card">
-              <div className="product-img">
+            <div className="product-card1">
+              <div className="product-img1">
                 <img src={extra2} alt="" />
               </div>
-              <div className="card-overlay">
-                <div className="product-details">
-                  <div className="sub-details"></div>
-                  <div className="product-info">
+              <div className="card-overlay1">
+                <div className="product-details1">
+                  <div className="sub-details1"></div>
+                  <div className="product-info1">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a voluptatum expedita inventore cupiditate! Deserunt placeat nam eligendi quibusdam dicta quos. Cumque pariatur ea aliquid excepturi deserunt consectetur debitis consequatur?
                     </p>
@@ -44,14 +44,14 @@ export function About() {
                 </div>
               </div>
             </div>
-            <div className="product-card">
-              <div className="product-img">
+            <div className="product-card1">
+              <div className="product-img1">
                 <img src={extra3} alt="" />
               </div>
-              <div className="card-overlay">
-                <div className="product-details">
-                  <div className="sub-details"></div>
-                  <div className="product-info">
+              <div className="card-overlay1">
+                <div className="product-details1">
+                  <div className="sub-details1"></div>
+                  <div className="product-info1">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a voluptatum expedita inventore cupiditate! Deserunt placeat nam eligendi quibusdam dicta quos. Cumque pariatur ea aliquid excepturi deserunt consectetur debitis consequatur?
                     </p>
