@@ -40,54 +40,48 @@ main {
 
 .cards-container {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards horizontally */
-    justify-content: flex-start; /* Align cards to the start of the container */
-    width: 100%; /* Take up full width */
-    max-width: 1200px; /* Maximum width of the container, adjust as needed */
-    margin: 0 auto; /* Center the container itself */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .blog-card {
     display: flex;
-    max-width: 60%;
-    flex-direction: column; /* Stack content and image vertically */
-    justify-content: space-between; /* Distribute space */
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-    height: auto; /* Adjust based on content, or set a min-height for consistency */
-    min-height: 200px; /* Example minimum height; adjust as needed */
-    /*.blog-card {*/
-    /*    !* Your existing .blog-card styles *!*/
-    /*    width: 100%; !* Make cards take full width of their container *!*/
-    /*    max-width: 600px; !* Maximum width of each card, adjust as needed *!*/
-    /*}*/
+    height: auto;
+    min-height: 200px;
 }
 
 .blog-card article {
     display: flex;
-    flex-direction: row; /* Ensure content and images are side by side */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Distribute space between text and image */
-    flex: 1; /* Allow article to fill available space */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
     padding: 20px;
 }
 
 .blog-card .content {
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Stack text content vertically */
-    justify-content: center; /* Center text content vertically */
-    padding-right: 20px; /* Provide spacing between text and image */
-    flex: 1; /* Allow text content to fill available space */
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
 }
 
 .blog-card img {
-    max-width: 20%; /* Limit image width to half of the card */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without distorting aspect ratio */
+    max-width: 20%;
+    height: auto;
+    object-fit: cover;
 }
 
 .blog-card:hover {
@@ -95,35 +89,39 @@ main {
     background-color: lightslategray;
 }
 
-footer {
-    background-color: #f4f4f4;
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) { /* Mobile phones */
+    nav ul li {
+        display: block; /* Stack the navigation items vertically */
+        margin: 10px 0; /* Adjust margins for smaller screens */
+    }
+
+    .blog-card, .blog-card article {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .blog-card img {
+        max-width: 100%; /* Allow image to take full width on small screens */
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+
+    main, .cards-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) { /* Tablets */
+    nav ul li {
+        margin: 0 5px; /* Slightly smaller margins */
+    }
 
-.blog-card:nth-child(odd) .content, .blog-card:nth-child(even) img {
-    order: 1; /* Ensures content is on the left for odd cards, image on the left for even */
+    .blog-card {
+        max-width: 100%; /* Full width cards on tablets */
+    }
 }
 
-.blog-card:nth-child(even) .content, .blog-card:nth-child(odd) img {
-    order: 2; /* Ensures image is on the right for odd cards, content on the right for even */
+@media (min-width: 1025px) { /* Desktops */
+    nav ul li a {
+        padding: 15px; /* More padding for larger screens */
+    }
 }
-
-.blog-card .content, .blog-card img {
-    flex: 1; /* Allows both content and image to fill available space equally */
-}
-
-.blog-card .content {
-    padding-right: 20px; /* Adds some spacing between text content and the image for odd cards */
-}
-
-.blog-card:nth-child(even) .content {
-    padding-right: 0;
-    padding-left: 20px; /* Adds some spacing between text content and the image for even cards */
-}
-
-.blog-card img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-}
-

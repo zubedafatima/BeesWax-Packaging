@@ -55,7 +55,6 @@ body, html {
     margin: 40px auto; /* Adds top margin to create space */
 }
 
-
 form {
     display: flex;
     flex-direction: column;
@@ -79,7 +78,6 @@ form textarea {
     transition: border-color 0.3s ease;
 }
 
-
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
@@ -99,4 +97,39 @@ form button {
 
 form button:hover {
     background-color: #72b0c0; /* Darker shade of primary color for button hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+    }
+
+    .nav-bar ul li a {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .contact-container {
+        padding: 10px;
+        margin: 20px;
+        max-width: 100%;
+    }
+
+    form input[type="text"], form input[type="email"], form textarea, form button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar ul li a {
+        padding: 8px;
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
 }
