@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Routes, Route } from "react-router-dom";
-import "../styles/HomeStyle.css";
+import "../styles/HomeStyle.module.css";
 import homepag1 from "../images/homepage.jpg";
 import homepag2 from "../images/homepage2.png";
 

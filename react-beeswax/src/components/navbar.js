@@ -5,7 +5,7 @@ import { Cart } from "./cart.js";
 import { About } from "./about.js";
 import { Contact } from "./contact.js";
 import { Profile } from "./profile.js";
-import { Blogs } from "./blogs.js";
+import { Blog } from "./blogs.js";
 import { Products } from "./products.js";
 
 export function Navbar() {
@@ -67,7 +67,7 @@ export function Navbar() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
