@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link, Routes, Route } from "react-router-dom";
-import "../styles/HomeStyle.module.css";
+import styles from "../styles/HomeStyle.module.css";
 import homepag1 from "../images/homepage.jpg";
 import homepag2 from "../images/homepage2.png";
 
 export function Home () {
   return (
-    <div className="container-fluid">
-      <div className="carousel">
-        <div className="carousel-img">
+    <div className={styles.body}>
+    <div className={styles.containerFluid}>
+      <div className={styles.carousel}>
+        <div className={styles.carouselImg}>
           <img src={homepag1} alt=""/>
         </div>
 
-        <div className="carousel-text2">
+        <div className={styles.carouselText2}>
           <h1>Bees Wax Packaging</h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -22,24 +23,24 @@ export function Home () {
           </p>
         </div>
       </div>
-      <div className="midline">
+      <div className={styles.midline}>
         <h1>Embark On The Journey Of Sustainability</h1>
       </div>
-      <div className="sub-container">
-        <div className="sub-containerimage">
+      <div className={styles.subContainer}>
+        <div className={styles.subContainerImage}>
           <img src={homepag2} alt=""/>
         </div>
-        <div className="sub-containertext">
+        <div className={styles.subContainerText}>
           <h1> Reduce your use of plastics in the new year! </h1>
-          <button className="shop-now-button"> 
-            <Link to="/products">Shop Now</Link> 
+          <button className={styles.shopNowButton}>
+            <Link to="/products">Shop Now</Link>
           </button>
         </div>
       </div>
-      <div className="buffer"></div> 
-      <div className="footer">
+      <div className={styles.footer}>
         <p>© 2024 BeesWax Packaging. All rights reserved.</p>
       </div>
+    </div>
     </div>
   );
 };

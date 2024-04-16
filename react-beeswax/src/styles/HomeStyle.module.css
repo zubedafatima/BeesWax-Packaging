@@ -1,147 +1,185 @@
-/* homepage.css */
+/* home.module.css */
 
 .body {
-    background-color: rgba(247, 241, 229, 0.952);
-  }
-  
-  .container-fluid {
-    width: 100%;
-    height: 100%;
-    /* Your container-fluid styles */
-  }
-  
-  .carousel {
-    width: 100%;
-    height: 55%;
-    align-items: center;
-    justify-content: center;
-    /* Your carousel styles */
-  }
-  
-  .carousel-img {
-    margin-top: 40px;
-    width: 65%;
-    height: 50%; 
-    z-index: 0;
-    opacity: 0.9;
-    margin-bottom: 40px;
-    object-fit: none;
-    transform: translateX(51.75%);
-    overflow-x: hidden;
+  background-color: rgba(247, 241, 229, 0.952);
+}
+
+/* Define styles for desktop screens */
+.containerFluid {
+  width: 100%;
+  height: 100%;
+  /* Your container-fluid styles */
+}
+
+.carousel {
+  width: 100%;
+  height: 55%;
+  align-items: center;
+  justify-content: center;
+  /* Your carousel styles */
+}
+
+.carouselImg {
+  margin-top: 40px;
+  width: 65%; /* Set the image width as a percentage of its container */
+  height: auto; /* Ensure the image maintains its aspect ratio */
+  z-index: 0;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  object-fit: none;
+  transform: translateX(51.75%);
+  overflow-x: hidden;
+}
+
+.carouselText2 {
+  width: 30%;
+  height: 100%;
+  color: black;
+  text-align: left;
+  transform: translate(5%,-140%);
+  z-index: 1;
+  /* Your carousel text styles */
+}
+
+.carouselText2 h1 {
+  font-size: 2.5em; /* Adjust font size for different screens */
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: black;
+  /* Your carousel text h1 styles */
+}
+
+.carouselText2 p {
+  background-color: #8ECAE6;
+  padding: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+.midline {
+  width: 100%;
+  height: 20px;
+  /* Your midline styles */
+}
+
+.midline h1 {
+  font-size: 3.5em; /* Consider adjusting font size on smaller screens */
+  padding-left: 18%;
+  color: black;
+  /* Your midline h1 styles */
+}
+
+.subContainer {
+  width: 50%;
+  height: 50%;
+  /* Your sub-container styles */
+}
+
+.subContainerImage img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-evenly;
+  margin-top: 80px;
+  margin-left: 15%;
+  /* Your sub-container image styles */
+}
+
+.subContainerText {
+  width: 30%;
+  height: 100%;
+  color: black;
+  text-align: center;
+  transform: translate(250%,-200%);
+  margin-left: 60%;
+  z-index: 1;
+  /* Your sub-container text styles */
+}
+
+.shopNowButton {
+  padding: 10px 20px;
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ffb703;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Your shop-now-button styles */
+}
+
+.shopNowButton:hover {
+  background-color: #f1ad00;
+  transform: scale(1.1);
+  /* Your shop-now-button hover styles */
+}
+
+.shopNowButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.shopNowButton a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  text-align: center;
+  /* Your footer styles */
+}
+
+/* Media query for smaller screens */
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  .carouselImg img {
+    width: 100%; /* Full width on smaller screens */
+    transform: translateX(0%); /* Reset horizontal translation */
   }
 
-  
-  .carousel-text2 {
-    width: 30%;
-    height: 100%;
-    color: black;
-    text-align: left;
-    transform: translate(-225%,-30%);
-    z-index: 1;
-    /* Your carousel text styles */
+  .carouselText2 {
+    width: 80%; /* Adjust width for better fit */
+    transform: translate(0%, -20%); /* Less aggressive vertical shift */
+    padding: 0 10%; /* Add padding for better text spacing */
   }
-  
-  .carousel-text h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    color: black;
-    /* Your carousel text h1 styles */
+
+  .carouselText2 h1 {
+    font-size: 1.8em; /* Adjusted font size */
+    padding-left: 0; /* Remove left padding */
   }
-  
-  .carousel-text2 p {
-    background-color: #8ECAE6;
-    margin-top: 80px;
-    padding: 50px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: white;
-    /* Your carousel text p styles */
+
+  .carouselText2 p {
+    font-size: 0.9em; /* Smaller text size in paragraph for better fit */
   }
-  
-  .midline {
-    width: 100%;
-    height: 20px;
-    /* Your midline styles */
-  }
-  
+
   .midline h1 {
-    font-size: 3.5em;
-    margin-top: 100px;
-    padding-left: 18%;
-    color: black;
-    /* Your midline h1 styles */
+    font-size: 2.0em; /* Reduce the font size */
+    padding-left: 5%; /* Less padding on smaller screens */
   }
-  
-  .sub-container {
-    width: 50%;
-    height: 50%;
-    /* Your sub-container styles */
-  }
-  
-  .sub-containerimage img {
+
+  .subContainer {
     display: flex;
-    width: 45%;
-    height: 100%;
-    justify-content: space-evenly;
-    margin-top: 80px;
-    margin-left: 15%;
-    /* Your sub-container image styles */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
   }
-  
-  .sub-containertext {
-    width: 30%;
-    height: 100%;
-    color: black;
-    text-align: center;
-    transform: translateY(-200%);
-    margin-left: 60%;
-    z-index: 1;
-    /* Your sub-container text styles */
+
+  .subContainerImage img {
+    margin-left: 10%; /* Adjust margin to center */
+    width: 50%; /* Adjust width for better fit */
   }
-  
-  .sub-containertext h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    padding-left: 100px;
-    color: black;
-    white-space: normal;
-    /* Your sub-container text h1 styles */
+
+  .subContainerText {
+    width: 90%; /* Wider text container to utilize more space */
+    margin-left: 5%; /* Centering the text block */
+    transform: translateY(0%); /* Reset vertical transformation */
+    padding: 10px; /* Padding for better spacing */
   }
-  
-  .shop-now-button {
-    padding: 10px 20px;
-    margin-left: 100px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #ffb703;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    /* Your shop-now-button styles */
+  .shopNowButton {
+    margin: 20px auto;
   }
-  
-  .shop-now-button:hover {
-    background-color: #f1ad00;
-    transform: scale(1.1);
-    /* Your shop-now-button hover styles */
-  }
-  
-  .shop-now-button a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .shop-now-button a:hover {
-    color: white;
-    text-decoration: none;
-  }
- 
-  .footer {
-    background-color: #f4f4f4;
-    padding: 20px 0;
-    text-align: center;
-    /* Your footer styles */
-  }
-  
+}
