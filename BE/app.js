@@ -1,6 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const orderRoutes = require("./endpoints/orders");
+const userRoutes = require("./endpoints/users");
+
+
+
+console.log(userRoutes);
+
+//Allow cross origin requests
+const cors = require('cors');
 
 const app = express();
 
@@ -15,9 +23,12 @@ connectDb = async () => {
 
 // Middleware
 app.use(express.json());
+app.use(cors());
+
 
 // Mount routes
 app.use("/api", orderRoutes);
+app.use("/api/users", userRoutes);
 
 // Start the server
 const PORT = 3000;

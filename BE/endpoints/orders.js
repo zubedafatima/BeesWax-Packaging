@@ -7,8 +7,8 @@ const orderController = new OrderController(orderService);
 
 const router = express.Router();
 
-router.post("/orders", orderController.createOrder.bind(orderController));
-router.get("/orders", orderController.getOrders.bind(orderController));
+router.post("/orders-create", orderController.createOrder.bind(orderController));
+router.get("/orders-retrieve", orderController.getOrders.bind(orderController));
 router.get("/orders/:id", orderController.getOrder.bind(orderController));
 router.put("/orders/:id", orderController.updateOrder.bind(orderController));
 router.delete("/orders/:id", orderController.deleteOrder.bind(orderController));

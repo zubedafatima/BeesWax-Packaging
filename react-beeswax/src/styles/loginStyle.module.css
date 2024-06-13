@@ -1,0 +1,80 @@
+
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.centerContent {
+    text-align: center;
+    
+}
+
+.loginForm {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.loginForm h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginForm input [type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.loginForm input[type="password"] {
+    width: 280px; /* Adjust width as needed */
+    height:20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.loginForm button:hover {
+  background-color: #0056b3;
+}
+
+.loginForm .error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.loginForm .success {
+  color: green;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.loginForm .link {
+  text-align: center;
+}
+
+.loginForm .link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.loginForm .link a:hover {
+  text-decoration: underline;
+}

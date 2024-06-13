@@ -7,6 +7,10 @@ import { Contact } from "./contact.js";
 import { Profile } from "./profile.js";
 import { Blog } from "./blogs.js";
 import { Products } from "./products.js";
+import { Login } from "./login.js";
+import { SignUp } from "./signup.js";
+import { Orderss } from "./orders.js";
+
 
 export function Navbar() {
   return (
@@ -60,6 +64,9 @@ export function Navbar() {
               </svg>
             </Link>
           </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </nav>
 
@@ -72,6 +79,9 @@ export function Navbar() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/orders" element={<Orderss />} />
       </Routes>
     </>
   );
