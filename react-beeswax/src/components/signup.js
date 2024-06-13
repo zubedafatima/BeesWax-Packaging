@@ -17,7 +17,7 @@ export function SignUp() {
         const userData = { username, name, password, email, phoneno, creditcard };
     
         try {
-          const response = await fetch("http://localhost:3000/api/users/user-signup", {
+          const response = await fetch("http://localhost:3000/api/v1/users/user-signup", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

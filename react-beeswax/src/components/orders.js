@@ -6,7 +6,7 @@ export function Orderss() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/orders-retrieve");
+        const response = await fetch("http://localhost:3000/api/v1/orders-retrieve");
         const data = await response.json();
         setOrders(data);
       } catch (error) {

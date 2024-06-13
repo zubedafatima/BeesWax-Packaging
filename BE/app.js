@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const orderRoutes = require("./endpoints/orders");
 const userRoutes = require("./endpoints/users");
-
+//const paymentRoutes = require("./endpoints/payments");
 
 
 console.log(userRoutes);
@@ -27,8 +27,9 @@ app.use(cors());
 
 
 // Mount routes
-app.use("/api", orderRoutes);
-app.use("/api/users", userRoutes);
+app.use("/api/v1", orderRoutes);
+app.use("/api/v1/users", userRoutes);
+//app.use("/api/v1/payments", paymentRoutes);
 
 // Start the server
 const PORT = 3000;
